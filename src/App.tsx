@@ -5,9 +5,6 @@ import { api } from './services/api';
 
 import './styles/global.scss';
 
-import './styles/sidebar.scss';
-import './styles/content.scss';
-
 export interface GenreResponseProps {
   id: number;
   name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
@@ -42,8 +39,16 @@ export function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <SideBar selectedGenreId={selectedGenreId} handleClickButton={handleClickButton} genres={genres} />
-      <Content selectedGenreId={selectedGenreId} selectedGenre={selectedGenre} setSelectedGenre={setSelectedGenre} />
+      <SideBar
+        selectedGenreId={selectedGenreId}
+        handleClickButton={handleClickButton}
+        genres={genres}
+      />
+      <Content
+        selectedGenreId={selectedGenreId}
+        selectedGenre={selectedGenre}
+        setSelectedGenre={setSelectedGenre}
+      />
     </div>
   )
 }

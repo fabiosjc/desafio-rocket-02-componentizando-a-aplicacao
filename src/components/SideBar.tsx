@@ -1,6 +1,8 @@
 import { GenreResponseProps } from "../App"
 import { Button } from "./Button"
 
+import '../styles/sidebar.scss';
+
 type SideBarProps = {
   selectedGenreId: number,
   genres: GenreResponseProps[],
